@@ -1,24 +1,47 @@
 # ITunesWalkmanSync
 
-TODO: Write a gem description
+iTunesで管理しているMP3ファイルをwalkmanに同期するためのrubyスクリプトです。
+開発途中で、エラーチェックなどもしていません。
+現時点では、Rubyのコードが直せる人でなければ使えないと思って下さい。
+
+特徴：
+・２枚組以上のCDをwalkmanに入れた場合に曲順が入れ替わる問題に対処するため、
+　track番号を２枚組での通し番号に振り直します。
+・アルバムアートをjpgに揃えます。(walkmanはjpgの方が良いと聞いたので)
+
+既知の問題：
+・macでしか動かないと思います
+・デバッグ用のログが標準出力にガリガリでます
+・MP3のタグにutf-8以外の文字が入っていると文字化けします
 
 ## Installation
 
-Add this line to your application's Gemfile:
+インストール：
 
-    gem 'iTunesWalkmanSync'
+このリポジトリをcloneします
 
-And then execute:
+設定：
 
-    $ bundle
+サンプルを元に設定ファイルを作成します。
 
-Or install it yourself as:
+    $ cp etc/config.yml.sample etc/config.yml
 
-    $ gem install iTunesWalkmanSync
+iTunesとwalkmanのライブラリのディレクトリを指定します。
+
+    $ vi etc/config.yml
+
+必要なgemをインストールします。
+
+    $ bundle install
+
+実行：
+以下の通りコマンドを実行します。
+
+    $ bundle exec bin/iTunesWalkmanSync
 
 ## Usage
 
-TODO: Write usage instructions here
+特になし
 
 ## Contributing
 
