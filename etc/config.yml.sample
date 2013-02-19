@@ -1,0 +1,6 @@
+itunes_dir: /Users/takemikami/Music/iTunes/iTunes Media/Music
+walkman_dir: /Volumes/WALKMAN/MUSIC
+except_authors:
+ - AKB48
+except_albums:
+ - 倉木麻衣/Wish You The Best

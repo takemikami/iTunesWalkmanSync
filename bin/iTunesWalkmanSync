@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require 'iTunesWalkmanSync/command'
+ITunesWalkmanSyncCommand::execute(STDOUT, ARGV)
+
